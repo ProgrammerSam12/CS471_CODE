@@ -1,6 +1,18 @@
-*.log
+# Ignore the virtual environment
+djangoenv/
+env/
+venv/
+
+# Ignore compiled Python files
 *.pyc
 __pycache__/
-.env
-venv/
-migrations/
+
+# Ignore database files
+db.sqlite3
+
+# Ignore migration files
+*/migrations/*
+
+# Ignore IDE settings
+.vscode/
+.idea/

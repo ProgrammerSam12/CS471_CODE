@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Hello from a Template, {{ name }}!</h1>
+    <p>Welcome to the book module homepage.</p>
+    
+    <h3>Try passing a name in the URL:</h3>
+    <ul>
+        <li><a href="/books/?name=Husam">Greet Husam</a></li>
+        <li><a href="/books/?name=Yara">Greet Yara</a></li>
+    </ul>
+</body>
+</html>
