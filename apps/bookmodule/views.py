@@ -16,3 +16,13 @@ def viewbook(request, bookId):
     targetBook = book1 if bookId == 123 else book2 if bookId == 456 else None
 
     return render(request, "bookmodule/show.html", {"book": targetBook})
+
+
+def index(request):
+    return render(request, "bookmodule/index.html")
+def list_books(request):
+    return render(request, 'bookmodule/list_books.html')
+def viewbook(request, bookId):
+    return render(request, 'bookmodule/one_book.html')
+def aboutus(request):
+    return render(request, 'bookmodule/aboutus.html')

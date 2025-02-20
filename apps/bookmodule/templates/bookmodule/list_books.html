@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Books</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="list_books.html">List Books</a>
+            <a href="aboutus.html">About</a>
+        </div>
+
+
+        <h1>List of Books</h1>
+        <a href="one_book.html"><h2>Internet & World Wide Web How to Program</h2></a>        
+        <a href="{% url 'books.one_book' %}"><h2>Internet & World Wide Web How to Program</h2></a>
+
+        <a href="one_book.html"><img src="book1.jpg" alt="Book1 img desc" width="200"
+        height="200"></a>
+        <hr>
+        <h2>Available Books</h2>
+        <img src="book2.jpg" alt="Book2 img desc" width="200" height="200">
+        <hr>
+        <h2>Available Books</h2>
+        <img src="book3.jpg" alt="Book3 img desc" width="200" height="200">
+        <hr>
+</body>
+</html> 
+ -->
+
+<!-- 
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Books</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="topnav">
+        <a href="{% url 'books.index' %}">Home</a>
+        <a class="active" href="{% url 'books.list_books' %}">List Books</a>
+        <a href="{% url 'books.aboutus' %}">About</a>
+    </div>
+
+    <h1>Available Books</h1>
+    
+    <ul>
+        <li><a href="{% url 'books.view_one_book' bookId=1 %}">Book 1</a></li>
+        <li><a href="{% url 'books.view_one_book' bookId=2 %}">Book 2</a></li>
+        <li><a href="{% url 'books.view_one_book' bookId=3 %}">Book 3</a></li>
+    </ul>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Books</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <style>
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <a href="{% url 'books.index' %}">Home</a>
+        <a href="{% url 'books.list_books' %}">List Books</a>
+        <a href="{% url 'books.aboutus' %}">About</a>
+    </div>
+
+    <h1>List of Books</h1>
+
+    <!-- First Book -->
+    <a href="{% url 'books.view_one_book' bookId=1 %}">
+        <h2>Internet & World Wide Web How to Program</h2>
+        <img src="{% static 'book1.jpg' %}" alt="Book 1 Image" width="200" height="200">
+    </a>
+    <hr>
+
+    <!-- Second Book -->
+    <h2>Available Books</h2>
+    <a href="{% url 'books.view_one_book' bookId=2 %}">
+        <img src="{% static 'book2.jpg' %}" alt="Book 2 Image" width="200" height="200">
+    </a>
+    <hr>
+
+    <!-- Third Book -->
+    <h2>Available Books</h2>
+    <a href="{% url 'books.view_one_book' bookId=3 %}">
+        <img src="{% static 'book3.jpg' %}" alt="Book 3 Image" width="200" height="200">
+    </a>
+    <hr>
+
+</body>
+</html>  
