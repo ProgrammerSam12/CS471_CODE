@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layouts/base.html' %}
 
-{% load static %}
+{% block title %}Home{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>My First Index HTML Page</title>
-    <meta name="keywords" content="Books, recent, Learning, library">
-    <meta name="description" content="Books website">
-    <meta name="author" content="author name">
-    
-    <!-- Load favicon dynamically -->
-    <link rel="icon" href="{% static 'qu-icon.png' %}">
-
-    <!-- Load CSS dynamically -->
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-</head>
-
-<body>
-    <div>
-        <a href="{% url 'books.index' %}">Home</a>
-        <a href="{% url 'books.list_books' %}">List Books</a>
-        <a href="{% url 'books.aboutus' %}">About</a>
-    </div>
-
+{% block content %}
     <h1 style="color: red; font-size: 30px;">Welcome to the Home Page</h1>
     <p>This is a paragraph text</p>
-    
     <a href="https://www.w3schools.com/html/default.asp">Learn more about HTML</a>
-    <hr>
-
-    <h2>This is heading 2</h2>
-    <p>This is some other text. <br> with newline <br> and another line</p>
-    <hr>
-
-    <h2>This is heading 2</h2>
-    <p>This is some other text.</p>
-</body>
-</html>
+{% endblock %}

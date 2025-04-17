@@ -1,0 +1,98 @@
+Folder PATH listing for volume Windows
+Volume serial number is E89D-BA77
+C:.
+¦   .gitignore
+¦   db.sqlite3
+¦   layout.txt
+¦   manage.py
+¦   
++---apps
+¦   +---bookmodule
+¦   ¦   ¦   admin.py
+¦   ¦   ¦   apps.py
+¦   ¦   ¦   models.py
+¦   ¦   ¦   tests.py
+¦   ¦   ¦   urls.py
+¦   ¦   ¦   views.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---migrations
+¦   ¦   ¦   ¦   __init__.py
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---__pycache__
+¦   ¦   ¦           __init__.cpython-312.pyc
+¦   ¦   ¦           
+¦   ¦   +---templates
+¦   ¦   ¦   +---bookmodule
+¦   ¦   ¦           aboutus.html
+¦   ¦   ¦           index.html
+¦   ¦   ¦           list_books.html
+¦   ¦   ¦           one_book.html
+¦   ¦   ¦           
+¦   ¦   +---__pycache__
+¦   ¦           admin.cpython-312.pyc
+¦   ¦           apps.cpython-312.pyc
+¦   ¦           models.cpython-312.pyc
+¦   ¦           urls.cpython-312.pyc
+¦   ¦           views.cpython-312.pyc
+¦   ¦           __init__.cpython-312.pyc
+¦   ¦           
+¦   +---static
+¦   ¦   ¦   book1.jpg
+¦   ¦   ¦   book2.jpg
+¦   ¦   ¦   book3.jpg
+¦   ¦   ¦   qu-icon.png
+¦   ¦   ¦   styles.css
+¦   ¦   ¦   
+¦   ¦   +---css
+¦   ¦       ¦   styles.css
+¦   ¦       ¦   
+¦   ¦       +---bookmodule
+¦   +---templates
+¦   ¦   +---bookmodule
+¦   ¦   ¦       aboutus.html
+¦   ¦   ¦       base.html
+¦   ¦   ¦       index.html
+¦   ¦   ¦       list_books.html
+¦   ¦   ¦       one_book.html
+¦   ¦   ¦       
+¦   ¦   +---includes
+¦   ¦   ¦       footer.html
+¦   ¦   ¦       header.html
+¦   ¦   ¦       
+¦   ¦   +---layouts
+¦   ¦           base.html
+¦   ¦           
+¦   +---usermodule
+¦       ¦   admin.py
+¦       ¦   apps.py
+¦       ¦   models.py
+¦       ¦   tests.py
+¦       ¦   views.py
+¦       ¦   __init__.py
+¦       ¦   
+¦       +---migrations
+¦       ¦   ¦   __init__.py
+¦       ¦   ¦   
+¦       ¦   +---__pycache__
+¦       ¦           __init__.cpython-312.pyc
+¦       ¦           
+¦       +---__pycache__
+¦               admin.cpython-312.pyc
+¦               apps.cpython-312.pyc
+¦               models.cpython-312.pyc
+¦               __init__.cpython-312.pyc
+¦               
++---libraryproject
+    ¦   asgi.py
+    ¦   settings.py
+    ¦   urls.py
+    ¦   wsgi.py
+    ¦   __init__.py
+    ¦   
+    +---__pycache__
+            settings.cpython-312.pyc
+            urls.cpython-312.pyc
+            wsgi.cpython-312.pyc
+            __init__.cpython-312.pyc
+            
