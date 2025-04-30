@@ -18,6 +18,14 @@ def viewbook(request, bookId):
     return render(request, "bookmodule/show.html", {"book": targetBook})
 
 
+
+def __getBooksList():
+    book1 = {'id':12344321, 'title':'Continuous Delivery', 'author':'J.Humble and D. Farley'}
+    book2 = {'id':56788765,'title':'Reversing: Secrets of Reverse Engineering', 'author':'E. Eilam'}
+    book3 = {'id':43211234, 'title':'The Hundred-Page Machine Learning Book', 'author':'Andriy Burkov'}
+    return [book1, book2, book3]
+
+
 def index(request):
     return render(request, "bookmodule/index.html")
 
@@ -41,3 +49,51 @@ def listing(request):
 
 def tables(request):
     return render(request, 'bookmodule/tables.html')
+
+
+
+def search_books(request):
+    if request.method == "POST":
+        string = request.POST.get('keyword', '').lower()
+        isTitle = request.POST.get('option1')
+        isAuthor = request.POST.get('option2')
+
+        books = __getBooksList()
+        newBooks = []
+
+        for item in books:
+            contained = False
+            if isTitle and string in item['title'].lower():
+                contained = True
+            if not contained and isAuthor and string in item['author'].lower():
+                contained = True
+            if contained:
+                newBooks.append(item)
+
+        return render(request, 'bookmodule/bookList.html', {'books': newBooks})
+
+    return render(request, 'bookmodule/search.html')
+
+
+#def search_books(request):
+    context = {}
+    if request.method == "POST":
+        keyword = request.POST.get("keyword", "")
+        title_checked = request.POST.get("option1")
+        author_checked = request.POST.get("option2")
+
+        result = f"Searching for: <strong>{keyword}</strong><br>"
+
+        if title_checked:
+            result += "✔️ In Title<br>"
+        if author_checked:
+            result += "✔️ In Author<br>"
+
+        if not title_checked and not author_checked:
+            result += "<em>No search options selected.</em>"
+
+        context["result"] = result
+
+    return render(request, 'bookmodule/search.html', context)
+
+
