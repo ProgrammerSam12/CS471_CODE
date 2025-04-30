@@ -1,0 +1,69 @@
+.link1 {
+    background-color: lightgreen;
+    color: orange;
+    text-decoration: underline;
+    display: block;
+    padding: 15px;
+    text-align: center;
+}
+
+.link2 {
+    background-color: gray;
+    color: yellow;
+    text-decoration: underline;
+    display: block;
+    padding: 15px;
+    text-align: center;
+}
+
+.link3 {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    display: block;
+    padding: 15px;
+    text-align: center;
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+.text-left {
+    text-align: left;
+    /*padding: 0px;*/
+}
+
+/*ul li {
+    margin-bottom: 15px;
+}*/
+
+
+
+
+..styled-table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.styled-table td, .styled-table th {
+    border: 1px solid black;
+    padding: 8px 10px;
+    text-align: center;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
