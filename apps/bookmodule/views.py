@@ -1,5 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Book
+
+
+def simple_query(request):
+    mybooks = Book.objects.filter(title__icontains='and') #modified line from title to author
+    #mybooks = Book.objects.filter(author__icontains='and')
+    return render(request, 'bookmodule/bookList.html', {'books': mybooks})
+
+
+
+def complex_query(request):
+    mybooks = Book.objects.filter(author__isnull=
+False).filter(title__icontains='and').filter(edition__gte=2).exclude(price__lte=100)[:10]   #modified the three filters to find a result...
+    
+    
+    if len(mybooks)>=1:
+        return render(request, 'bookmodule/bookList.html', {'books':mybooks})
+    else:
+        return render(request, 'bookmodule/index.html')
+
 
 def index(request):
     name = request.GET.get("name", "world!")
@@ -75,7 +95,10 @@ def search_books(request):
     return render(request, 'bookmodule/search.html')
 
 
-#def search_books(request):
+
+
+
+###def search_books(request):
     context = {}
     if request.method == "POST":
         keyword = request.POST.get("keyword", "")
@@ -97,3 +120,18 @@ def search_books(request):
     return render(request, 'bookmodule/search.html', context)
 
 
+
+ 
+
+
+#def complex_query(request):
+    mybooks = Book.objects.filter(
+        author__isnull=False,
+        title__icontains='and',
+        edition__gte=2
+    ).exclude(price__lte=100)[:10]
+
+    if mybooks:
+        return render(request, 'bookmodule/bookList.html', {'books': mybooks})
+    else:
+        return render(request, 'bookmodule/index.html')

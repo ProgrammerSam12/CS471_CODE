@@ -1,5 +1,3 @@
-
-
 {% extends "layouts/base.html" %}
 
 {% block title %} Book Results {% endblock title %}
@@ -15,5 +13,14 @@
     <li>No books found.</li>
     {% endfor %}
 </ul>
+
+
+{% for obj in books %}
+    ID: {{ obj.id }}, Title: {{ obj.title }}<hr>
+{% empty %}
+    <p>No books found.</p>
+{% endfor %}
+
+
 {% endblock content %}
 
