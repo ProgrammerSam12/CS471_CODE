@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% block title %} Task 4 - Sorted by Title {% endblock %}
+
+{% block content %}
+<h2>Books (Sorted by Title A–Z)</h2>
+<ul>
+    {% for book in books %}
+    <li>{{ book.title }} by {{ book.author }}</li>
+    {% empty %}
+    <li>No books found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

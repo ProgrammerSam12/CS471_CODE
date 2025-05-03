@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% block title %} Task 3 - Exclude Edition > 3 and "co" {% endblock %}
+
+{% block content %}
+<h2>Books with Edition ≤ 3 and without "co" in title or author</h2>
+<ul>
+    {% for book in books %}
+    <li>{{ book.title }} by {{ book.author }} — Edition: {{ book.edition }}</li>
+    {% empty %}
+    <li>No matching books found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

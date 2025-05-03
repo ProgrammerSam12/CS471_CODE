@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% block title %} Task 2 - Edition > 3 & Title/Author has "co" {% endblock %}
+
+{% block content %}
+<h2>Books with Edition > 3 and "co" in title or author</h2>
+<ul>
+    {% for book in books %}
+    <li>{{ book.title }} by {{ book.author }} - Edition: {{ book.edition }}</li>
+    {% empty %}
+    <li>No matching books.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
